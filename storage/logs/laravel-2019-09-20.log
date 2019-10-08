@@ -1,0 +1,8 @@
+[2019-09-20 08:30:33] local.ERROR: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。
+ (SQL: select count(*) as aggregate from `room`)  
+[2019-09-20 08:31:15] local.ERROR: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。
+ (SQL: select * from `room` where `room`.`id` = 1 limit 1)  
+[2019-09-20 08:31:45] local.ERROR: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。
+ (SQL: select * from `room` where `room`.`id` = 1 limit 1)  
+[2019-09-20 08:32:01] local.ERROR: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。
+ (SQL: select * from `room` where `room`.`id` = 1 limit 1)  

@@ -1,0 +1,4 @@
+[2019-07-31 14:51:52] local.ERROR: App\Http\Controllers\Controller::rakutenProducts(): Failed opening required 'rws-php-sdk-1.1.0/autoload.php' (include_path='C:\xampp\php\PEAR') {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): App\\Http\\Controllers\\Controller::rakutenProducts(): Failed opening required 'rws-php-sdk-1.1.0/autoload.php' (include_path='C:\\xampp\\php\\PEAR') at C:\\xampp\\htdocs\\hakobeya\\app\\Http\\Controllers\\Controller.php:121)
+[stacktrace]
+#0 {main}
+"} 
