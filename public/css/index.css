@@ -1,0 +1,25 @@
+body {
+    background-color: lightseagreen;
+    text-align: center;
+}
+
+.box {
+    margin: 10px;
+    display: inline-block;      /* インラインブロック要素にする */
+    background-color: #FFFFFF;
+    vertical-align: top;
+    height:  300px;             /* 高さ指定 */
+    width: 20%;                 /* 幅指定 */
+}
+
+.card-body {
+    text-align: left;
+}
+img.form-group {
+    width: 50%;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}

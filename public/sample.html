@@ -1,0 +1,52 @@
+<html>
+<meta charset="utf-8"/>
+<body>
+<script src="build/three.js"></script>
+<script>
+ 
+window.addEventListener("DOMContentLoaded", function(){ //windowにイベント追加
+    //使い回しが多い数値は変数にしておく
+    var width  = 640;
+    var height = 480;
+    var aspect = width / height;
+ 
+    //シーン
+    var scene = new THREE.Scene(); //sceneという変数にはThee.scene()を入れる
+ 
+    //カメラ
+    var camera = new THREE.PerspectiveCamera( 65, aspect, 1, 1000 );　//左から画角、縦横比、クリッピング近い、クリッピング遠い
+    camera.position.z = 600;
+             
+    //オブジェクト
+    var geometry = new THREE.CubeGeometry(200,200,200);//ジオメトリを用意
+    var material = new THREE.MeshLambertMaterial( { color: 0x202080 });//ランバートマテリアルを用意
+    var cube = new THREE.Mesh( geometry, material); //ジオメトリとマテリアルを合体させたものがcubeだ
+    cube.rotation.set(0.5, 0.5, 0); //cube回転
+    scene.add( cube ); //シーンに追加
+ 
+    //ライティング
+    var directionalLight = new THREE.DirectionalLight( 0xffffff, 3 ); //平行光源（色、強度）
+    directionalLight.position.set(0,0,3);
+    scene.add( directionalLight );
+ 
+    //レンダラー
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize( width, height );
+    renderer.setClearColor(new THREE.Color('white'));//背景色の設定
+    document.body.appendChild( renderer.domElement );
+             
+    //レンダリング
+    renderer.render( scene, camera );
+             
+    //キューブを回転させて再描画
+    function animate(){
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            requestAnimationFrame( animate );
+            renderer.render( scene, camera );
+    }
+    animate();
+});
+</script>
+</body>
+</html>
